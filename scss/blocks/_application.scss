@@ -1,0 +1,39 @@
+.application{
+    padding-top: 180px;
+    min-height: 560px;
+    background: linear-gradient(180deg, #242B33 10.42%, rgba(36, 43, 51, 0.00)
+     50.52%, #242B33 90.1%), linear-gradient(0deg, rgba(36, 43, 51, 0.90) 0%, 
+     rgba(36, 43, 51, 0.90) 100%), url('./../img/application/application-bg.jpg'), lightgray 50% / cover no-repeat;
+
+        &-row{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        &-info{
+
+
+            &__title{
+                color: $titlecolor;
+                font-family: $font-accent;
+                font-size: 36px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                margin-bottom: 17px;
+            }
+
+            &__text{
+                font-family: $font-main;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+            }
+        }
+
+
+        &-form{
+
+        }
+    }
