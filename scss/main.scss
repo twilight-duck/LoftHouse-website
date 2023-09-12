@@ -1,7 +1,11 @@
-@import  './base/_reset.scss';
-@import  './base/_base.scss';
+// Base
+@import  './base/reset';
+@import  './base/vars';
+@import  './base/base';
+// Blocks
+@import  './blocks/header.scss';
+@import  './blocks/benefits.scss';
+@import  './blocks/apartments.scss';
 
 
-body {
-    color: red
-}
+

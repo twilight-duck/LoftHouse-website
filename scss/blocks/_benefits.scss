@@ -1,0 +1,28 @@
+.benefits{
+    padding-top: 120px;
+    margin-bottom: 120px;
+
+    &-row{
+        display: flex;
+        justify-content: center;
+        column-gap: 70px;
+    }
+
+    &-item{
+        display: flex;
+        flex-direction: column;
+        gap: 53px;
+        align-items: center;
+        text-align: center;
+
+
+        &__text{
+            text-align: center;
+            font-family: Roboto;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 27px;
+        }
+    }
+}

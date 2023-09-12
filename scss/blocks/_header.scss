@@ -1,0 +1,91 @@
+.header{
+    min-height: 840px;
+
+    background:  linear-gradient(180deg, #242B33 11.98%, 
+    rgba(45, 52, 60, 0.38) 51.04%, #242B33 92.19%), 
+    url('./../img/header/header-bg.jpg'), lightgray 50% / cover no-repeat;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 225px;
+
+        &__link{
+            color: #FFF;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 0.7px;
+            transition: all ease 0.4s;
+            position: relative;
+
+            &::before{
+                content: '';
+                background: none repeat scroll 0 0 transparent;
+                position: absolute;
+                bottom: -3px;
+                left: 50%;
+                width: 100%;
+                height: 2px;
+                background-color: $titlecolor;
+                transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                display: block;
+                width: 0;
+            }
+
+            &:hover{
+                color: $titlecolor
+            }
+
+            &:hover::before{
+                width: 100%;
+                left: 0;
+            }
+        }
+    }
+
+    &-nav nav{
+        display: flex;
+        gap: 40px;
+    }
+
+    &-title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 200px;
+
+        &-heading{
+            font-family: $font-accent;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            color: $titlecolor;
+            margin-bottom: 81px;
+            text-align: center;
+        }
+    }
+
+    &-footer{
+        display: flex;
+        justify-content: center;
+        gap: 98px;
+        
+
+        &-location{
+            display: flex;
+            gap: 14px;
+        }
+
+        &-phone{
+            display: flex;
+            gap: 14px;
+        }
+    }
+}
