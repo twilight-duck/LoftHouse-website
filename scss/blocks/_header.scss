@@ -1,22 +1,61 @@
 .header{
     min-height: 840px;
-
+    padding-top: 30px;
     background:  linear-gradient(180deg, #242B33 11.98%, 
     rgba(45, 52, 60, 0.38) 51.04%, #242B33 92.19%), 
     url('./../img/header/header-bg.jpg'), lightgray 50% / cover no-repeat;
-
-
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include mediaTablet{
+        min-height: unset;
+        row-gap: 50px;
+    }
+
     &-top{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 225px;
+        width: 100%;
+
+        
+
+        &__row{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &--mobile{
+                position: fixed;
+                background-color: #000;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: unset;
+                z-index: 99;
+                padding-top: 40px;
+                gap: 50px;
+
+                .header-nav__btn{
+                    position: fixed;
+                    top: 30px;
+                    right: 30px;
+                }
+
+                .header-nav nav{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 30px;
+                    align-items: center;
+                    
+                }
+
+            }
+        }
 
         &__link{
-            color: #FFF;
+            color: #fff;
             font-size: 14px;
             font-weight: 400;
             line-height: normal;
@@ -53,12 +92,20 @@
         display: flex;
         gap: 40px;
     }
+    
+
 
     &-title{
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 200px;
+        padding-top: 225px;
+        padding-bottom: 200px;
+
+        @include mediaTablet{
+            padding-bottom: 30px;
+            padding-top: 35px;
+        }
 
         &-heading{
             font-family: $font-accent;
@@ -69,6 +116,10 @@
             color: $titlecolor;
             margin-bottom: 81px;
             text-align: center;
+
+            @include mediaTablet{
+                font-size: 36px;
+            }
         }
     }
 
@@ -77,6 +128,11 @@
         justify-content: center;
         gap: 98px;
         
+        @include mediaTablet{
+           flex-direction: column;
+           align-items: center;
+           gap: 30px;
+        }
 
         &-location{
             display: flex;
@@ -87,5 +143,29 @@
             display: flex;
             gap: 14px;
         }
+    }
+
+    &-logo {
+
+        & path{
+            transition: all 0.3s ease;
+        }
+
+        &:hover path {
+            fill: $titlecolor;
+        }
+    }
+}
+
+.header-nav nav{
+    @include mediaTablet{
+        display: none;
+    }
+}
+
+.header-nav__btn{
+    display: none;
+    @include mediaTablet{
+        display: block;
     }
 }

@@ -1,0 +1,29 @@
+.questions{
+    padding-top: 180px;
+    padding-bottom: 180px;
+
+    &-title{
+        font-family: $font-accent;
+        color: $titlecolor;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 38px;
+
+        @include mediaTablet{
+            margin-bottom: 25px;
+        }
+    }
+
+    &-form{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        align-items: center;
+
+        @include mediaTablet{
+            grid-template-columns: 1fr;
+        }
+    }
+}

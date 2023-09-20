@@ -8,6 +8,23 @@ body{
 
 .container{
     padding: 0 15px;
-    width: 1140px;
+    max-width: 1140px;
     margin: 0 auto;
+}
+
+
+.no-scroll{
+    overflow-y: hidden;
+}
+
+.title-2{
+        font-family: $font-accent;
+        color: $titlecolor;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    @include mediaTablet{
+        font-size: 28px;
+    }
 }

@@ -1,0 +1,71 @@
+.footer{
+    min-height: 272px;
+    background: #2D343C;
+    padding-top: 72px;
+    padding-bottom: 51px;
+    font-size: 14px;
+
+    @include mediaTablet{
+        padding-top: 40px;
+        padding-bottom: 25px;
+    }
+
+    &-grid{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+
+        @include mediaTablet{
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 30px 40px;
+        }
+    }
+
+    &-logo{
+        margin-top: -12px;
+
+
+        & path{
+            transition: all 0.3s ease;
+        }
+
+        &:hover path {
+            fill: $titlecolor;
+        }
+    }
+
+    &-nav__list{
+        display: grid;
+        gap: 15px;
+        letter-spacing: 0.7px;
+    }
+
+    &-address__list{
+        display: grid;
+        gap: 15px;
+        margin-bottom: 15px;
+        letter-spacing: 0.7px;
+    }
+
+    &-nav__link a{
+        transition: all 0.2s ease;
+    }
+
+    &-nav__link a:hover{
+        color: $titlecolor;
+    }
+}
+
+.socials{
+    display: flex;
+    gap: 22px;
+
+    & svg path{
+        transition: all 0.2s ease;
+    }
+
+
+    & svg:hover path{
+        fill: $titlecolor;
+    }
+}

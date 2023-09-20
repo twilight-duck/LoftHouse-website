@@ -1,0 +1,60 @@
+.video{
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    &::after{
+        position: absolute;
+        content: 'IV';
+        font-family: $font-accent;
+        font-size: 400px;
+        font-weight: 700;
+        z-index: -1;
+        top: 10%;
+        right: -4%;
+        // : calc(50% + 555px);
+        // transform: translate(50%, 0);
+        opacity: 0.02;
+        line-height: 1.1;
+    }
+
+    &-link{
+        position: relative;
+        display: inline-block;
+        text-align: center;
+
+        &::before{
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: rgba(36, 43, 51, 0.8);
+            transition: background-color 0.2s ease-in;
+        }
+
+        &:hover::before{
+            background: rgba(36, 43, 51, 0.7);
+        }
+
+        &-play{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.2s ease-in;
+
+            @include mediaTablet{
+                width: 80px;
+                height: 80px;
+            }
+        }
+    }
+}
+
+.video-link:hover .video-link-play{
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+.video-link:hover svg path{
+    fill: rgba(255, 255, 255, 0.8);
+}

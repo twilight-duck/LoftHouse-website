@@ -1,12 +1,22 @@
 // Base
 @import  './base/reset';
 @import  './base/vars';
+@import  './base/mixins';
 @import  './base/base';
+
 // Blocks
+@import  './blocks/nav-icon';
+@import  './blocks/ymap';
 @import  './blocks/header.scss';
 @import  './blocks/benefits.scss';
 @import  './blocks/apartments.scss';
 @import  './blocks/application.scss';
+@import  './blocks/video.scss';
+@import  './blocks/map.scss';
+@import  './blocks/questions.scss';
+@import  './blocks/footer.scss';
 
 
-
+.none{
+    display: none;
+}
